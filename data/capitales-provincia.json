@@ -1,0 +1,266 @@
+{
+  "_AVISO": "DATOS DE EJEMPLO FICTICIOS. Sustituye 'capitalRecomendado' por el coste medio real de un sepelio en cada provincia (en euros, sin puntos ni símbolos).",
+  "actualizado": "2026-10-11",
+  "provincias": {
+    "01": {
+      "nombre": "Álava",
+      "slug": "alava",
+      "capitalRecomendado": 4600
+    },
+    "02": {
+      "nombre": "Albacete",
+      "slug": "albacete",
+      "capitalRecomendado": 3700
+    },
+    "03": {
+      "nombre": "Alicante",
+      "slug": "alicante",
+      "capitalRecomendado": 3900
+    },
+    "04": {
+      "nombre": "Almería",
+      "slug": "almeria",
+      "capitalRecomendado": 3600
+    },
+    "05": {
+      "nombre": "Ávila",
+      "slug": "avila",
+      "capitalRecomendado": 3300
+    },
+    "06": {
+      "nombre": "Badajoz",
+      "slug": "badajoz",
+      "capitalRecomendado": 3500
+    },
+    "07": {
+      "nombre": "Illes Balears",
+      "slug": "baleares",
+      "capitalRecomendado": 4800
+    },
+    "08": {
+      "nombre": "Barcelona",
+      "slug": "barcelona",
+      "capitalRecomendado": 4500
+    },
+    "09": {
+      "nombre": "Burgos",
+      "slug": "burgos",
+      "capitalRecomendado": 3600
+    },
+    "10": {
+      "nombre": "Cáceres",
+      "slug": "caceres",
+      "capitalRecomendado": 3300
+    },
+    "11": {
+      "nombre": "Cádiz",
+      "slug": "cadiz",
+      "capitalRecomendado": 4000
+    },
+    "12": {
+      "nombre": "Castellón",
+      "slug": "castellon",
+      "capitalRecomendado": 4200
+    },
+    "13": {
+      "nombre": "Ciudad Real",
+      "slug": "ciudad-real",
+      "capitalRecomendado": 3400
+    },
+    "14": {
+      "nombre": "Córdoba",
+      "slug": "cordoba",
+      "capitalRecomendado": 3600
+    },
+    "15": {
+      "nombre": "A Coruña",
+      "slug": "a-coruna",
+      "capitalRecomendado": 3300
+    },
+    "16": {
+      "nombre": "Cuenca",
+      "slug": "cuenca",
+      "capitalRecomendado": 3500
+    },
+    "17": {
+      "nombre": "Girona",
+      "slug": "girona",
+      "capitalRecomendado": 4200
+    },
+    "18": {
+      "nombre": "Granada",
+      "slug": "granada",
+      "capitalRecomendado": 3400
+    },
+    "19": {
+      "nombre": "Guadalajara",
+      "slug": "guadalajara",
+      "capitalRecomendado": 3600
+    },
+    "20": {
+      "nombre": "Gipuzkoa",
+      "slug": "gipuzkoa",
+      "capitalRecomendado": 4400
+    },
+    "21": {
+      "nombre": "Huelva",
+      "slug": "huelva",
+      "capitalRecomendado": 3500
+    },
+    "22": {
+      "nombre": "Huesca",
+      "slug": "huesca",
+      "capitalRecomendado": 3700
+    },
+    "23": {
+      "nombre": "Jaén",
+      "slug": "jaen",
+      "capitalRecomendado": 3400
+    },
+    "24": {
+      "nombre": "León",
+      "slug": "leon",
+      "capitalRecomendado": 3600
+    },
+    "25": {
+      "nombre": "Lleida",
+      "slug": "lleida",
+      "capitalRecomendado": 3800
+    },
+    "26": {
+      "nombre": "La Rioja",
+      "slug": "la-rioja",
+      "capitalRecomendado": 4000
+    },
+    "27": {
+      "nombre": "Lugo",
+      "slug": "lugo",
+      "capitalRecomendado": 3700
+    },
+    "28": {
+      "nombre": "Madrid",
+      "slug": "madrid",
+      "capitalRecomendado": 4500
+    },
+    "29": {
+      "nombre": "Málaga",
+      "slug": "malaga",
+      "capitalRecomendado": 4100
+    },
+    "30": {
+      "nombre": "Murcia",
+      "slug": "murcia",
+      "capitalRecomendado": 3800
+    },
+    "31": {
+      "nombre": "Navarra",
+      "slug": "navarra",
+      "capitalRecomendado": 4600
+    },
+    "32": {
+      "nombre": "Ourense",
+      "slug": "ourense",
+      "capitalRecomendado": 3700
+    },
+    "33": {
+      "nombre": "Asturias",
+      "slug": "asturias",
+      "capitalRecomendado": 3900
+    },
+    "34": {
+      "nombre": "Palencia",
+      "slug": "palencia",
+      "capitalRecomendado": 3600
+    },
+    "35": {
+      "nombre": "Las Palmas",
+      "slug": "las-palmas",
+      "capitalRecomendado": 3800
+    },
+    "36": {
+      "nombre": "Pontevedra",
+      "slug": "pontevedra",
+      "capitalRecomendado": 3500
+    },
+    "37": {
+      "nombre": "Salamanca",
+      "slug": "salamanca",
+      "capitalRecomendado": 3700
+    },
+    "38": {
+      "nombre": "Santa Cruz de Tenerife",
+      "slug": "santa-cruz-de-tenerife",
+      "capitalRecomendado": 3900
+    },
+    "39": {
+      "nombre": "Cantabria",
+      "slug": "cantabria",
+      "capitalRecomendado": 4100
+    },
+    "40": {
+      "nombre": "Segovia",
+      "slug": "segovia",
+      "capitalRecomendado": 3300
+    },
+    "41": {
+      "nombre": "Sevilla",
+      "slug": "sevilla",
+      "capitalRecomendado": 4000
+    },
+    "42": {
+      "nombre": "Soria",
+      "slug": "soria",
+      "capitalRecomendado": 3700
+    },
+    "43": {
+      "nombre": "Tarragona",
+      "slug": "tarragona",
+      "capitalRecomendado": 3900
+    },
+    "44": {
+      "nombre": "Teruel",
+      "slug": "teruel",
+      "capitalRecomendado": 3600
+    },
+    "45": {
+      "nombre": "Toledo",
+      "slug": "toledo",
+      "capitalRecomendado": 3300
+    },
+    "46": {
+      "nombre": "Valencia",
+      "slug": "valencia",
+      "capitalRecomendado": 4000
+    },
+    "47": {
+      "nombre": "Valladolid",
+      "slug": "valladolid",
+      "capitalRecomendado": 4200
+    },
+    "48": {
+      "nombre": "Bizkaia",
+      "slug": "bizkaia",
+      "capitalRecomendado": 4500
+    },
+    "49": {
+      "nombre": "Zamora",
+      "slug": "zamora",
+      "capitalRecomendado": 3600
+    },
+    "50": {
+      "nombre": "Zaragoza",
+      "slug": "zaragoza",
+      "capitalRecomendado": 3800
+    },
+    "51": {
+      "nombre": "Ceuta",
+      "slug": "ceuta",
+      "capitalRecomendado": 3500
+    },
+    "52": {
+      "nombre": "Melilla",
+      "slug": "melilla",
+      "capitalRecomendado": 3700
+    }
+  }
+}

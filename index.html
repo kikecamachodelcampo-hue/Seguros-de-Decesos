@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:INICIO -->
+  <title>Precio seguro de decesos: compara compañías en 10 segundos | SegurDecesos</title>
+  <meta name="description" content="Calcula gratis el precio de tu seguro de decesos según tu edad y provincia. Comparamos varias compañías por ti y te asesoramos sin coste. Pide tu presupuesto sin compromiso.">
+  <link rel="canonical" href="https://segurdecesos.com/">
+  <meta property="og:title" content="Precio seguro de decesos: compara compañías en 10 segundos">
+  <meta property="og:description" content="Calcula gratis cuánto cuesta tu seguro de decesos según tu edad y provincia.">
+  <meta property="og:url" content="https://segurdecesos.com/">
+  <!-- SEO:FIN -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="SegurDecesos">
+  <meta name="theme-color" content="#1f5f7a">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="data/tarifas.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "SegurDecesos",
+    "legalName": "[NOMBRE CORREDURÍA]",
+    "url": "https://segurdecesos.com/",
+    "telephone": "[TELÉFONO]",
+    "email": "[EMAIL]",
+    "address": { "@type": "PostalAddress", "streetAddress": "[DIRECCIÓN]", "addressCountry": "ES" },
+    "areaServed": "ES"
+  }
+  </script>
+</head>
+<body data-base="">
+  <a class="skip-link" href="#calculadora">Ir a la calculadora</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="./" aria-label="SegurDecesos, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 6 8v11c0 9 6 15.5 14 18 8-2.5 14-9 14-18V8L20 3Z" fill="#1f5f7a"/><path d="M20 28s-7-4.3-7-9.2c0-2.4 1.9-4.3 4.2-4.3 1.2 0 2.2.5 2.8 1.3.6-.8 1.6-1.3 2.8-1.3 2.3 0 4.2 1.9 4.2 4.3 0 4.9-7 9.2-7 9.2Z" fill="#fcebdf"/></svg>
+        <span>Segur<b>Decesos</b></span>
+      </a>
+      <a class="btn btn-call header-call" data-tel href="#contacto">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+        <span class="short">Llamar</span><span class="long">[TELÉFONO]</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ PORTADA + CALCULADORA ============ -->
+    <section class="hero" id="calculadora" aria-labelledby="titulo-principal">
+      <div class="container hero-grid">
+        <div class="hero-intro">
+          <!-- PORTADA:INICIO -->
+          <h1 id="titulo-principal">¿Cuánto cuesta un seguro de decesos? Compruébalo en 10 segundos</h1>
+          <p class="lead">Compara gratis varias compañías y elige con calma. Sin compromiso.</p>
+          <!-- PORTADA:FIN -->
+          <ul class="trust-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>Comparamos varias aseguradoras por ti</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>Asesoramiento gratuito y personal</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>Correduría inscrita en la DGSFP</li>
+          </ul>
+        </div>
+
+        <div class="card calc-card">
+          <h2>Calcula tu precio orientativo</h2>
+          <form id="calc-form" novalidate>
+            <div class="row-2">
+              <div class="field">
+                <label for="edad">Tu edad</label>
+                <input type="text" id="edad" name="edad" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" aria-describedby="edad-error" placeholder="Ej: 62">
+                <div class="error-msg" id="edad-error" aria-live="polite"></div>
+              </div>
+              <div class="field">
+                <label for="cp">Código postal</label>
+                <input type="text" id="cp" name="cp" inputmode="numeric" pattern="[0-9]*" maxlength="5" autocomplete="postal-code" aria-describedby="cp-error cp-feedback" placeholder="Ej: 46001">
+                <div class="error-msg" id="cp-error" aria-live="polite"></div>
+                <div class="cp-feedback" id="cp-feedback" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="field">
+              <fieldset aria-describedby="sexo-error">
+                <legend>Sexo</legend>
+                <div class="choice-group" id="sexo-group">
+                  <label class="choice"><input type="radio" name="sexo" value="mujer"><span>Mujer</span></label>
+                  <label class="choice"><input type="radio" name="sexo" value="hombre"><span>Hombre</span></label>
+                </div>
+              </fieldset>
+              <div class="error-msg" id="sexo-error" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="calc-btn">Ver precios</button>
+            <p class="small" style="margin:10px 0 0;text-align:center">Gratis, sin registrarte y sin compromiso.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTADOS ============ -->
+    <section class="results" id="resultados" aria-labelledby="resultados-titulo" hidden>
+      <div class="container">
+        <h2 id="resultados-titulo" tabindex="-1">Tus precios orientativos</h2>
+        <div id="resultados-contenido" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container contact-grid">
+        <div class="card">
+          <h2 id="contacto-titulo">Pide tu presupuesto exacto sin compromiso</h2>
+          <p>Déjanos tus datos y un asesor te llamará para darte el precio exacto. Es gratis.</p>
+          <div class="summary" id="resumen" aria-live="polite"></div>
+          <form id="contact-form" novalidate>
+            <input type="hidden" name="edad" id="h-edad">
+            <input type="hidden" name="sexo" id="h-sexo">
+            <input type="hidden" name="codigo_postal" id="h-cp">
+            <input type="hidden" name="provincia" id="h-provincia">
+            <input type="hidden" name="capital_recomendado" id="h-capital">
+            <input type="hidden" name="compania_elegida" id="h-compania">
+            <input type="hidden" name="precio_orientativo" id="h-precio">
+            <!-- Campo trampa contra spam: no lo rellenan las personas -->
+            <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" aria-describedby="nombre-error">
+              <div class="error-msg" id="nombre-error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" inputmode="tel" autocomplete="tel" aria-describedby="telefono-error">
+              <div class="error-msg" id="telefono-error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="small">(opcional)</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+              <div class="error-msg" id="email-error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label class="checkbox" for="rgpd">
+                <input type="checkbox" id="rgpd" name="consentimiento_rgpd" value="Acepta" aria-describedby="rgpd-error">
+                <span>He leído y acepto la <a href="legal/politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y que me contactéis para darme el presupuesto.</span>
+              </label>
+              <div class="error-msg" id="rgpd-error" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="contact-btn">Quiero mi presupuesto exacto</button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            <p class="rgpd-info"><strong>Información básica sobre protección de datos.</strong> Responsable: [NOMBRE CORREDURÍA]. Finalidad: atender tu solicitud y enviarte un presupuesto de seguro. Legitimación: tu consentimiento. Destinatarios: no se ceden datos a terceros salvo a las aseguradoras que elijas para cotizar, o por obligación legal. Derechos: acceso, rectificación, supresión y otros, escribiendo a [EMAIL]. Más información en la <a href="legal/politica-privacidad.html">política de privacidad</a>.</p>
+          </form>
+        </div>
+
+        <aside class="card side-contact" aria-labelledby="hablar-titulo">
+          <h3 id="hablar-titulo">¿Prefieres hablar con una persona?</h3>
+          <p>Te atendemos de lunes a viernes, de [HORARIO].</p>
+          <a class="btn btn-wa btn-block" data-wa href="#contacto">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <p class="or">o</p>
+          <a class="btn btn-secondary btn-block" data-tel href="#contacto">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+            Llamar al [TELÉFONO]
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section alt" id="como-funciona" aria-labelledby="como-titulo">
+      <div class="container">
+        <h2 id="como-titulo">Cómo funciona</h2>
+        <p class="section-intro">Tres pasos sencillos. Sin papeleo y sin prisas.</p>
+        <ol class="steps">
+          <li><h3>Calcula tu precio</h3><p>Escribe tu edad, sexo y código postal. Verás al momento lo que cuesta en varias compañías.</p></li>
+          <li><h3>Te llamamos</h3><p>Un asesor revisa tu caso, resuelve tus dudas y te da el precio exacto. Sin ningún coste.</p></li>
+          <li><h3>Tú decides</h3><p>Si te convence, nos ocupamos de todo el papeleo. Si no, no pasa nada.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ UN CORREDOR ============ -->
+    <section class="section" id="por-que-corredor" aria-labelledby="corredor-titulo">
+      <div class="container">
+        <h2 id="corredor-titulo">Por qué contratar con un corredor</h2>
+        <p class="section-intro">Un corredor de seguros no trabaja para una sola compañía: trabaja para ti.</p>
+        <div class="benefits">
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2.5"/></svg>
+            <div><h3>Comparamos varias compañías por ti</h3><p>No tienes que llamar a cada aseguradora. Nosotros buscamos la opción que mejor se ajusta a lo que necesitas.</p></div>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg>
+            <div><h3>Asesoramiento gratuito</h3><p>Nuestro consejo no te cuesta nada. Te explicamos cada póliza con palabras claras.</p></div>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9.5 4.5-1 8-4.5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><h3>A tu lado cuando más falta hace</h3><p>Si tu familia nos necesita, les ayudamos con la compañía y los trámites. No estarán solos.</p></div>
+          </div>
+          <div class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><h3>Revisamos tu póliza cada año</h3><p>Si el precio sube demasiado, buscamos alternativas para que sigas protegido sin pagar de más.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPINIONES ============ -->
+    <section class="section soft" id="opiniones" aria-labelledby="opiniones-titulo">
+      <div class="container">
+        <h2 id="opiniones-titulo">Lo que dicen nuestros clientes</h2>
+        <!-- SUSTITUIR: estas opiniones son de EJEMPLO. Pon opiniones reales (con permiso del cliente) o borra la sección. -->
+        <p><span class="sample-flag">OPINIONES DE EJEMPLO - SUSTITUIR ANTES DE PUBLICAR</span></p>
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote><p>"Me explicaron todo con mucha paciencia y encontré un seguro más barato que el que tenía."</p></blockquote>
+            <figcaption>Cliente de ejemplo, 68 años, Valencia</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote><p>"Cuando falleció mi padre se encargaron de todo. Fue un alivio enorme para la familia."</p></blockquote>
+            <figcaption>Cliente de ejemplo, 52 años, Sevilla</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div>
+            <blockquote><p>"Rápido y claro. Me llamaron el mismo día y no me insistieron nada."</p></blockquote>
+            <figcaption>Cliente de ejemplo, 74 años, Madrid</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-titulo">
+      <div class="container">
+        <h2 id="faq-titulo">Preguntas frecuentes sobre el seguro de decesos</h2>
+        <details>
+          <summary>¿Qué es un seguro de decesos?</summary>
+          <div><p>Es un seguro que se ocupa del servicio funerario cuando una persona fallece: velatorio, féretro, entierro o incineración, traslados y trámites. Así tu familia no tiene que pagar ni organizar nada en un momento tan difícil.</p></div>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta un seguro de decesos?</summary>
+          <div><p>Depende sobre todo de tu edad, de la provincia donde vives y de la compañía. Con nuestra calculadora ves un precio orientativo en segundos. El precio final depende de las condiciones de la póliza.</p></div>
+        </details>
+        <details>
+          <summary>¿Qué es el capital asegurado y cuánto necesito?</summary>
+          <div><p>Es el dinero que cubre el seguro para pagar el servicio funerario. El coste de un sepelio cambia según la provincia, por eso te recomendamos un capital adaptado a la tuya. Si el capital se queda corto, la familia tendría que pagar la diferencia.</p></div>
+        </details>
+        <details>
+          <summary>¿Hasta qué edad puedo contratarlo?</summary>
+          <div><p>Cada compañía tiene su edad máxima de contratación, normalmente entre los 70 y los 90 años. Una vez contratado, el seguro te acompaña toda la vida mientras sigas pagando.</p></div>
+        </details>
+        <details>
+          <summary>¿El precio sube con los años?</summary>
+          <div><p>En la mayoría de pólizas, sí: el precio se actualiza según la edad. Hay modalidades con prima más estable. Te explicamos las diferencias sin compromiso.</p></div>
+        </details>
+        <details>
+          <summary>¿Puedo cambiar de compañía si ya tengo un seguro de decesos?</summary>
+          <div><p>Sí. En muchos casos se puede cambiar manteniendo la antigüedad. Revisamos tu póliza actual y te decimos si te conviene cambiar.</p></div>
+        </details>
+        <details>
+          <summary>¿Puedo asegurar a toda mi familia?</summary>
+          <div><p>Sí. Muchas pólizas permiten incluir a tu pareja, hijos y otros familiares, a menudo con mejor precio que por separado.</p></div>
+        </details>
+        <details>
+          <summary>¿Cuánto me cuesta el asesoramiento?</summary>
+          <div><p>Nada. Nuestro asesoramiento es gratuito para ti. Como corredores, nos paga la compañía que tú elijas.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ PROVINCIAS (SEO) ============ -->
+    <section class="section alt" id="provincias" aria-labelledby="provincias-titulo">
+      <div class="container">
+        <h2 id="provincias-titulo">Seguro de decesos en tu provincia</h2>
+        <p class="section-intro">El coste de un sepelio cambia de una provincia a otra. Consulta la tuya:</p>
+        <!-- PROVINCIAS:INICIO -->
+        <ul class="province-links">
+          <li><a href="seguro-decesos-a-coruna/">Seguro de decesos en A Coruña</a></li>
+          <li><a href="seguro-decesos-alava/">Seguro de decesos en Álava</a></li>
+          <li><a href="seguro-decesos-albacete/">Seguro de decesos en Albacete</a></li>
+          <li><a href="seguro-decesos-alicante/">Seguro de decesos en Alicante</a></li>
+          <li><a href="seguro-decesos-almeria/">Seguro de decesos en Almería</a></li>
+          <li><a href="seguro-decesos-asturias/">Seguro de decesos en Asturias</a></li>
+          <li><a href="seguro-decesos-avila/">Seguro de decesos en Ávila</a></li>
+          <li><a href="seguro-decesos-badajoz/">Seguro de decesos en Badajoz</a></li>
+          <li><a href="seguro-decesos-baleares/">Seguro de decesos en Illes Balears</a></li>
+          <li><a href="seguro-decesos-barcelona/">Seguro de decesos en Barcelona</a></li>
+          <li><a href="seguro-decesos-bizkaia/">Seguro de decesos en Bizkaia</a></li>
+          <li><a href="seguro-decesos-burgos/">Seguro de decesos en Burgos</a></li>
+          <li><a href="seguro-decesos-caceres/">Seguro de decesos en Cáceres</a></li>
+          <li><a href="seguro-decesos-cadiz/">Seguro de decesos en Cádiz</a></li>
+          <li><a href="seguro-decesos-cantabria/">Seguro de decesos en Cantabria</a></li>
+          <li><a href="seguro-decesos-castellon/">Seguro de decesos en Castellón</a></li>
+          <li><a href="seguro-decesos-ceuta/">Seguro de decesos en Ceuta</a></li>
+          <li><a href="seguro-decesos-ciudad-real/">Seguro de decesos en Ciudad Real</a></li>
+          <li><a href="seguro-decesos-cordoba/">Seguro de decesos en Córdoba</a></li>
+          <li><a href="seguro-decesos-cuenca/">Seguro de decesos en Cuenca</a></li>
+          <li><a href="seguro-decesos-gipuzkoa/">Seguro de decesos en Gipuzkoa</a></li>
+          <li><a href="seguro-decesos-girona/">Seguro de decesos en Girona</a></li>
+          <li><a href="seguro-decesos-granada/">Seguro de decesos en Granada</a></li>
+          <li><a href="seguro-decesos-guadalajara/">Seguro de decesos en Guadalajara</a></li>
+          <li><a href="seguro-decesos-huelva/">Seguro de decesos en Huelva</a></li>
+          <li><a href="seguro-decesos-huesca/">Seguro de decesos en Huesca</a></li>
+          <li><a href="seguro-decesos-jaen/">Seguro de decesos en Jaén</a></li>
+          <li><a href="seguro-decesos-la-rioja/">Seguro de decesos en La Rioja</a></li>
+          <li><a href="seguro-decesos-las-palmas/">Seguro de decesos en Las Palmas</a></li>
+          <li><a href="seguro-decesos-leon/">Seguro de decesos en León</a></li>
+          <li><a href="seguro-decesos-lleida/">Seguro de decesos en Lleida</a></li>
+          <li><a href="seguro-decesos-lugo/">Seguro de decesos en Lugo</a></li>
+          <li><a href="seguro-decesos-madrid/">Seguro de decesos en Madrid</a></li>
+          <li><a href="seguro-decesos-malaga/">Seguro de decesos en Málaga</a></li>
+          <li><a href="seguro-decesos-melilla/">Seguro de decesos en Melilla</a></li>
+          <li><a href="seguro-decesos-murcia/">Seguro de decesos en Murcia</a></li>
+          <li><a href="seguro-decesos-navarra/">Seguro de decesos en Navarra</a></li>
+          <li><a href="seguro-decesos-ourense/">Seguro de decesos en Ourense</a></li>
+          <li><a href="seguro-decesos-palencia/">Seguro de decesos en Palencia</a></li>
+          <li><a href="seguro-decesos-pontevedra/">Seguro de decesos en Pontevedra</a></li>
+          <li><a href="seguro-decesos-salamanca/">Seguro de decesos en Salamanca</a></li>
+          <li><a href="seguro-decesos-santa-cruz-de-tenerife/">Seguro de decesos en Santa Cruz de Tenerife</a></li>
+          <li><a href="seguro-decesos-segovia/">Seguro de decesos en Segovia</a></li>
+          <li><a href="seguro-decesos-sevilla/">Seguro de decesos en Sevilla</a></li>
+          <li><a href="seguro-decesos-soria/">Seguro de decesos en Soria</a></li>
+          <li><a href="seguro-decesos-tarragona/">Seguro de decesos en Tarragona</a></li>
+          <li><a href="seguro-decesos-teruel/">Seguro de decesos en Teruel</a></li>
+          <li><a href="seguro-decesos-toledo/">Seguro de decesos en Toledo</a></li>
+          <li><a href="seguro-decesos-valencia/">Seguro de decesos en Valencia</a></li>
+          <li><a href="seguro-decesos-valladolid/">Seguro de decesos en Valladolid</a></li>
+          <li><a href="seguro-decesos-zamora/">Seguro de decesos en Zamora</a></li>
+          <li><a href="seguro-decesos-zaragoza/">Seguro de decesos en Zaragoza</a></li>
+        </ul>
+        <!-- PROVINCIAS:FIN -->
+      </div>
+    </section>
+
+    <!-- ============ LLAMADA FINAL ============ -->
+    <section class="section cta-final" aria-labelledby="cta-titulo">
+      <div class="container">
+        <h2 id="cta-titulo">Protege a tu familia de un gasto inesperado</h2>
+        <p class="section-intro" style="margin-left:auto;margin-right:auto">Calcula tu precio o habla directamente con nosotros.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#calculadora">Calcular mi precio</a>
+          <a class="btn btn-wa" data-wa href="#contacto">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>SegurDecesos</h2>
+          <p>SegurDecesos.com es una marca de <strong>[NOMBRE CORREDURÍA]</strong>, correduría de seguros.</p>
+          <p class="dgsfp">Inscrita en el Registro Administrativo Especial de Mediadores de Seguros de la Dirección General de Seguros y Fondos de Pensiones (DGSFP) con la clave <strong>[NÚMERO DGSFP]</strong>. Seguro de responsabilidad civil y capacidad financiera conforme a la normativa vigente.</p>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li>Teléfono: <a data-tel href="#contacto">[TELÉFONO]</a></li>
+            <li>WhatsApp: <a data-wa href="#contacto">[TELÉFONO]</a></li>
+            <li>Email: <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+            <li>[DIRECCIÓN]</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Información legal</h2>
+          <ul>
+            <li><a href="legal/aviso-legal.html">Aviso legal</a></li>
+            <li><a href="legal/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="legal/politica-cookies.html">Política de cookies</a></li>
+            <li><button type="button" class="link-button" data-cookie-settings>Configurar cookies</button></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">Los precios mostrados son orientativos. El precio final depende de las condiciones de la póliza y de la compañía aseguradora. © <span data-year>2026</span> [NOMBRE CORREDURÍA].</p>
+    </div>
+  </footer>
+
+  <div class="float-bar" aria-label="Contacto rápido">
+    <a class="btn btn-wa" data-wa href="#contacto">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      WhatsApp
+    </a>
+    <a class="btn btn-call" data-tel href="#contacto">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

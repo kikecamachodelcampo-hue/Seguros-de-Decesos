@@ -1,0 +1,178 @@
+{
+  "_AVISO": "DATOS DE EJEMPLO FICTICIOS. No son precios reales de ninguna compañía. Sustitúyelos por las tarifas reales antes de publicar la web.",
+  "actualizado": "2026-10-11",
+  "moneda": "EUR",
+  "tramosEdad": [
+    {"desde": 18, "hasta": 30},
+    {"desde": 31, "hasta": 40},
+    {"desde": 41, "hasta": 50},
+    {"desde": 51, "hasta": 55},
+    {"desde": 56, "hasta": 60},
+    {"desde": 61, "hasta": 65},
+    {"desde": 66, "hasta": 70},
+    {"desde": 71, "hasta": 75},
+    {"desde": 76, "hasta": 80},
+    {"desde": 81, "hasta": 85},
+    {"desde": 86, "hasta": 90}
+  ],
+  "zonas": {
+    "A": {
+      "nombre": "Zona A (coste alto)",
+      "provincias": ["01", "07", "08", "20", "28", "31", "48"]
+    },
+    "B": {
+      "nombre": "Zona B (coste medio)",
+      "provincias": ["03", "11", "12", "17", "25", "26", "29", "30", "33", "35", "38", "39", "41", "43", "46", "47", "50"]
+    },
+    "C": {
+      "nombre": "Zona C (resto de provincias)",
+      "provincias": "resto"
+    }
+  },
+  "companias": [
+    {
+      "id": "ejemplo-a",
+      "nombre": "Aseguradora Ejemplo A",
+      "logo": "",
+      "color": "#2F6F8F",
+      "edadMaxima": 80,
+      "descuentoPagoAnual": 0.0,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Traslado nacional del fallecido",
+        "Asistencia psicológica a la familia"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [5.77, 7.88, 10.65, 14.42, 18.51, 24.71, 33.72, 46.0, 62.29, null, null]
+        },
+        "B": {
+          "ambos": [5.28, 7.21, 9.75, 13.2, 16.94, 22.61, 30.86, 42.11, 57.01, null, null]
+        },
+        "C": {
+          "ambos": [4.89, 6.67, 9.03, 12.22, 15.68, 20.94, 28.57, 38.99, 52.79, null, null]
+        }
+      }
+    },
+    {
+      "id": "ejemplo-b",
+      "nombre": "Aseguradora Ejemplo B",
+      "logo": "",
+      "color": "#6A8E4E",
+      "edadMaxima": 85,
+      "descuentoPagoAnual": 0.03,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Gestión de trámites tras el fallecimiento",
+        "Testamento online incluido"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [6.44, 8.63, 11.56, 15.5, 19.48, 25.22, 33.41, 44.75, 59.52, 78.64, null]
+        },
+        "B": {
+          "ambos": [5.9, 7.9, 10.58, 14.18, 17.83, 23.09, 30.57, 40.95, 54.48, 71.97, null]
+        },
+        "C": {
+          "ambos": [5.46, 7.31, 9.8, 13.13, 16.51, 21.38, 28.31, 37.92, 50.44, 66.64, null]
+        }
+      }
+    },
+    {
+      "id": "ejemplo-c",
+      "nombre": "Aseguradora Ejemplo C",
+      "logo": "",
+      "color": "#B5653A",
+      "edadMaxima": 75,
+      "descuentoPagoAnual": 0.0,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Repatriación desde el extranjero",
+        "Asistencia en viaje"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [6.04, 8.34, 11.75, 16.41, 21.72, 28.41, 37.63, 49.87, null, null, null]
+        },
+        "B": {
+          "ambos": [5.53, 7.63, 10.76, 15.02, 19.88, 26.0, 34.44, 45.65, null, null, null]
+        },
+        "C": {
+          "ambos": [5.12, 7.07, 9.96, 13.91, 18.4, 24.08, 31.89, 42.27, null, null, null]
+        }
+      }
+    },
+    {
+      "id": "ejemplo-d",
+      "nombre": "Aseguradora Ejemplo D",
+      "logo": "",
+      "color": "#7A5C99",
+      "edadMaxima": 85,
+      "descuentoPagoAnual": 0.02,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Elección libre de funeraria",
+        "Asesoramiento jurídico telefónico"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [6.13, 8.37, 11.45, 15.5, 19.89, 26.02, 34.12, 44.76, 58.33, 76.28, null]
+        },
+        "B": {
+          "ambos": [5.61, 7.66, 10.48, 14.18, 18.2, 23.81, 31.22, 40.97, 53.39, 69.81, null]
+        },
+        "C": {
+          "ambos": [5.2, 7.1, 9.7, 13.13, 16.86, 22.05, 28.91, 37.94, 49.43, 64.64, null]
+        }
+      }
+    },
+    {
+      "id": "ejemplo-e",
+      "nombre": "Aseguradora Ejemplo E",
+      "logo": "",
+      "color": "#2E7D74",
+      "edadMaxima": 90,
+      "descuentoPagoAnual": 0.05,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Sin límite de edad hasta 90 años",
+        "Segunda opinión médica"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [6.87, 9.2, 12.43, 16.65, 20.91, 26.76, 35.05, 45.94, 59.79, 77.29, 100.02]
+        },
+        "B": {
+          "ambos": [6.29, 8.42, 11.38, 15.24, 19.14, 24.49, 32.08, 42.05, 54.72, 70.74, 91.54]
+        },
+        "C": {
+          "ambos": [5.82, 7.79, 10.54, 14.11, 17.72, 22.68, 29.7, 38.93, 50.67, 65.5, 84.76]
+        }
+      }
+    },
+    {
+      "id": "ejemplo-f",
+      "nombre": "Aseguradora Ejemplo F",
+      "logo": "",
+      "color": "#A0484E",
+      "edadMaxima": 80,
+      "descuentoPagoAnual": 0.0,
+      "coberturas": [
+        "Servicio fúnebre completo",
+        "Traslado nacional e internacional",
+        "Ayuda para gastos de sepelio"
+      ],
+      "primasMensuales": {
+        "A": {
+          "ambos": [6.07, 8.37, 11.79, 16.29, 21.11, 27.89, 36.94, 49.45, 65.73, null, null]
+        },
+        "B": {
+          "ambos": [5.55, 7.66, 10.79, 14.91, 19.32, 25.53, 33.81, 45.26, 60.16, null, null]
+        },
+        "C": {
+          "ambos": [5.14, 7.09, 9.99, 13.8, 17.89, 23.64, 31.31, 41.91, 55.7, null, null]
+        }
+      }
+    }
+  ]
+}
